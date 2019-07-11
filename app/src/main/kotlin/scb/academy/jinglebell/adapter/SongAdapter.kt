@@ -18,6 +18,10 @@ class SongAdapter(
     val songs: List<Song>
         get() = _songs
 
+    init {
+        submitList(songs)
+    }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = SongItemViewHolder(parent)
 
     override fun onBindViewHolder(holder: SongItemViewHolder, position: Int) {
